@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+			integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+			crossorigin="anonymous"
+		/>
+		<title>Личный кабинет</title>
+		<style>
+			.wrapper-lk {
+				margin-top: 3rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container wrapper-lk">
+			<div class="row">
+				<div class="col-3">
+					<div
+						class="nav flex-column nav-pills"
+						id="v-pills-tab"
+						role="tablist"
+						aria-orientation="vertical"
+					>
+						<a
+							class="nav-link"
+							id="profileTab"
+							data-toggle="pill"
+							href="#v-pills-profile"
+							role="tab"
+							aria-controls="v-pills-profile"
+							aria-selected="false"
+							>Профиль</a
+						>
+						<a
+							class="nav-link"
+							id="messagesTab"
+							data-toggle="pill"
+							href="#v-pills-messages"
+							role="tab"
+							aria-controls="v-pills-messages"
+							aria-selected="false"
+							>Сообщения</a
+						>
+						<a
+							class="nav-link"
+							id="settingsTab"
+							data-toggle="pill"
+							href="#v-pills-settings"
+							role="tab"
+							aria-controls="v-pills-settings"
+							aria-selected="false"
+							>Настройки</a
+						>
+					</div>
+				</div>
+				<div class="col-9">
+					<div class="tab-content" id="v-pills-tabContent">
+						<div
+							class="tab-pane fade"
+							id="v-pills-profile"
+							role="tabpanel"
+							aria-labelledby="v-pills-profile-tab"
+						>
+							<div class="row">
+								<div class="col-md-3">
+									<img class="img-fluid" src="/img/r7.jpg" alt="" width="100%" />
+								</div>
+								<div class="col-md-9">
+									<h1>Id: <span id="index"></span></h1>
+									<h2>Фамилия и имя: <span id="userName"></span></h2>
+									<h3>Email: <span id="email"></span></h3>
+									<h3>О себе</h3>
+									<p>
+										Математический горизонт, по определению, иллюстрирует pадиотелескоп Максвелла.
+										Пpотопланетное облако пространственно неоднородно. Прямое восхождение вращает
+										астероидный возмущающий фактор. Hатpиевые атомы предварительно были замечены
+										близко с центром других комет, но Летучая Рыба выбирает близкий азимут.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="v-pills-messages"
+							role="tabpanel"
+							aria-labelledby="v-pills-messages-tab"
+						>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="row mb-2">
+										<div class="col-3">
+											<img src="/img/r3.jpg" alt="" />
+										</div>
+										<div class="col-9">
+											<h5>Марина</h5>
+											<p>А поехали на рыбалку!</p>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-3">
+											<img src="/img/r9.jpg" alt="" />
+										</div>
+										<div class="col-9">
+											<h5>Семен Семеныч</h5>
+											<p>Да, смешной анекдот )</p>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-3">
+											<img src="/img/r12.jpg" alt="" />
+										</div>
+										<div class="col-9">
+											<h5>Ибрагим</h5>
+											<p>Харашо, брат</p>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-3">
+											<img src="/img/r10.jpg" alt="" />
+										</div>
+										<div class="col-9">
+											<h5>Кристина</h5>
+											<p>Добрый день!</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-8">
+									<div class="row mb-3">
+										<div class="col-3">
+											<img src="/img/r2.jpg" alt="" />
+										</div>
+										<div class="col-9">
+											<h5>Сидор Петрович</h5>
+											<p>Да, спасибо. Заеду завтра!</p>
+										</div>
+									</div>
+									<div class="row mb-5">
+										<div class="col-3">
+											<img src="/img/r7.jpg" alt="" />
+										</div>
+										<div class="col-9">
+											<h5>Иван Иванов</h5>
+											<p>Отлично!</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<textarea
+												class="form-control"
+												rows="5"
+												placeholder="Текст сообщения"
+											></textarea>
+										</div>
+										<div class="col-6 offset-6 mt-3">
+											<button class="btn btn-primary form-control">Отправить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-5">
+								<div class="col-12">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th scope="col">Id</th>
+												<th scope="col">Фамилия и имя</th>
+												<th scope="col">Email</th>
+											</tr>
+										</thead>
+										<tbody id="usersList"></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="v-pills-settings"
+							role="tabpanel"
+							aria-labelledby="v-pills-settings-tab"
+						>
+							<h2 class="text-center">Настройки личного кабинета</h2>
+							<div class="row">
+								<div class="col-md-7 offset-5">
+									<p>Имя: <span>Иван</span><span>[изменить]</span></p>
+									<p class="mb-5">Фамилия: <span>Иванов</span><span>[изменить]</span></p>
+									<p>Тема: <span>темная</span><span>[изменить]</span></p>
+									<p>Шрифт: <span>Roboto</span><span>[изменить]</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+			crossorigin="anonymous"
+		></script>
+
+		<script>
+			let pathname = location.pathname.split("/")[2];
+			let navLink = document.querySelectorAll(".nav-link");
+
+			async function getUser() {
+				let response = await fetch("/getUser");
+				return await response.json();
+			}
+			async function getUsers() {
+				let response = await fetch("/getUsers");
+				return await response.json();
+			}
+
+			addEventListener("popstate", (event) => {
+				let pathPop = location.pathname.split("/")[2];
+				if (pathPop == "profile") {
+					$("#profileTab").tab("show");
+				} else if (pathPop == "messages") {
+					$("#messagesTab").tab("show");
+				} else if (pathPop == "settings") {
+					$("#settingsTab").tab("show");
+				}
+			});
+
+			if (pathname == "profile") {
+				getUser().then((user) => {
+					console.log(user);
+
+					index.innerText = `${user.id}`;
+					userName.innerText = `${user.name} ${user.lastname}`;
+					email.innerText = `${user.email}`;
+				});
+
+				$("#v-pills-profile").tab("show");
+			} else if (pathname == "messages") {
+				getUsers().then((users) => {
+					console.log(users);
+					for (let i = 0; i < users.length; i++) {
+						usersList.insertAdjacentHTML(
+							"beforeend",
+							`
+							<tr>
+								<th scope="row">${users[i].id}</th>
+								<td>${users[i].name} ${users[i].lastname}</td>
+								<td>${users[i].email}</td>
+							</tr>
+						`
+						);
+					}
+				});
+				$("#v-pills-messages").tab("show");
+			} else if (pathname == "settings") {
+				$("#v-pills-settings").tab("show");
+			} else {
+				location.href = location.protocol + "//" + location.host;
+			}
+
+			for (let i = 0; i < navLink.length; i++) {
+				navLink[i].addEventListener("click", () => {
+					let page = navLink[i].getAttribute("aria-controls").split("v-pills-")[1];
+					history.pushState("", "", page);
+					console.log(page);
+				});
+			}
+
+			document.getElementById(pathname + "Tab").classList.add("active");
+		</script>
+	</body>
+</html>
